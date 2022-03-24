@@ -62,28 +62,32 @@ class Ui_MainWindow(QtWidgets.QLabel):
         self.label_Notification.setObjectName("label_Notification")
         self.gridLayout_2.addWidget(self.label_Notification, 5, 0, 1, 1)
         
+        slider_user = """QSlider::groove:horizontal { 
+	background-color: grey;
+	border: 0px solid #424242; 
+	height: 10px; 
+	border-radius: 4px;
+}
+
+QSlider::handle:horizontal { 
+	background-color: white; 
+	border: 2px solid; 
+	width: 16px; 
+	height: 20px; 
+	line-height: 20px; 
+	margin-top: -5px; 
+	margin-bottom: -5px; 
+	border-radius: 10px; 
+}
+
+QSlider::handle:horizontal:hover { 
+	border-radius: 10px;
+}"""
+
+
+        
         self.horizontalSlider_2 = QtWidgets.QSlider(self.frame)
-        slider_user = """
-        QSlider {{ margin: {0}px; }}
-        QSlider::groove:horizontal {{
-            border-radius: 10px;
-            height: 20px;
-            margin: 0px;
-            background-color: rgb(52,59,72);
-        }}
-        QSlider::groove:horizontal:hover {{ background-color: {#1e2229}; }}
-            QSlider::handle:horizontal {{
-                border: none;
-                height: 200px;
-                width: 20px;
-                margin: 0px;
-                border-radius: 50px;
-                background-color: rgb(255,0,0);
-        }}
-        QSlider::handle:horizontal:hover {{ background-color: rgb(0,255,0); }}
-        QSlider::handle:horizontal:pressed {{ background-color: rgb(0,255,255); }}
-        """
-        self.horizontalSlider_2.setStyleSheet("")
+        self.horizontalSlider_2.setStyleSheet(slider_user)
         self.horizontalSlider_2.setMaximum(1)
         self.horizontalSlider_2.setOrientation(QtCore.Qt.Horizontal)
         self.horizontalSlider_2.setObjectName("horizontalSlider_2")
@@ -93,6 +97,7 @@ class Ui_MainWindow(QtWidgets.QLabel):
         self.gridLayout_2.addItem(spacerItem2, 5, 7, 1, 1)
         
         self.horizontalSlider_3 = QtWidgets.QSlider(self.frame)
+        self.horizontalSlider_3.setStyleSheet(slider_user)
         self.horizontalSlider_3.setMaximum(1)
         self.horizontalSlider_3.setOrientation(QtCore.Qt.Horizontal)
         self.horizontalSlider_3.setObjectName("horizontalSlider_3")
