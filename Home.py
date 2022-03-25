@@ -92,6 +92,7 @@ QSlider::handle:horizontal:hover {
         self.horizontalSlider_2.setOrientation(QtCore.Qt.Horizontal)
         self.horizontalSlider_2.setObjectName("horizontalSlider_2")
         self.gridLayout_2.addWidget(self.horizontalSlider_2, 5, 1, 1, 1)
+        self.horizontalSlider_2.valueChanged.connect(self.Slider_On)
         
         spacerItem2 = QtWidgets.QSpacerItem(150, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.gridLayout_2.addItem(spacerItem2, 5, 7, 1, 1)
@@ -102,6 +103,7 @@ QSlider::handle:horizontal:hover {
         self.horizontalSlider_3.setOrientation(QtCore.Qt.Horizontal)
         self.horizontalSlider_3.setObjectName("horizontalSlider_3")
         self.gridLayout_2.addWidget(self.horizontalSlider_3, 6, 1, 1, 1)
+        self.horizontalSlider_3.valueChanged.connect(self.Slider_User)
         
         self.label_Mode = QtWidgets.QLabel(self.frame)
         self.label_Mode.setObjectName("label_Mode")
@@ -142,6 +144,20 @@ QSlider::handle:horizontal:hover {
         self.label_Notification.setText(_translate("MainWindow", "<html><head/><body><p align=\"right\"><span style=\" font-size:10pt\">Notification :</span></p></body></html>"))
         self.label_Mode.setText(_translate("MainWindow", "<html><head/><body><p align=\"right\"><span style=\" font-size:10pt\">Mode :</span></p></body></html>"))
         self.label_On.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:10pt\">On</span></p></body></html>"))
+
+    def Slider_On(self):
+        _translate = QtCore.QCoreApplication.translate
+        if self.horizontalSlider_2.value() == 1:
+            self.label_On.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:10pt\">Off</span></p></body></html>"))
+        elif self.horizontalSlider_2.value() == 0:
+            self.label_On.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:10pt\">On</span></p></body></html>"))
+
+    def Slider_User(self):
+        _translate = QtCore.QCoreApplication.translate
+        if self.horizontalSlider_2.value() == 1:
+            self.label_User.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:10pt\">User</span></p></body></html>"))
+        elif self.horizontalSlider_2.value() == 0:
+            self.label_User.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:10pt\">Admin</span></p></body></html>"))
 
 
 if __name__ == "__main__":
