@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Generic_CRRID(object):
     def setupUi(self, Generic_CRRID):
         Generic_CRRID.setObjectName("Generic_CRRID")
-        Generic_CRRID.resize(1071, 402)
+        Generic_CRRID.resize(1150, 500)
         font = QtGui.QFont()
         font.setBold(True)
         font.setWeight(75)
@@ -25,10 +25,6 @@ class Ui_Generic_CRRID(object):
         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
         self.verticalLayout.setObjectName("verticalLayout")
         self.ScrollArea_generic_crrid = QtWidgets.QScrollArea(self.centralwidget)
-        self.ScrollArea_generic_crrid.setStyleSheet("QScrollBar::handle {\n"
-"    background-color: rgb(218, 218, 218);\n"
-"    border-radius: 10px;\n"
-"}")
         self.ScrollArea_generic_crrid.setWidgetResizable(True)
         self.ScrollArea_generic_crrid.setObjectName("ScrollArea_generic_crrid")
         self.scrollAreaWidgetContents_generic_mid = QtWidgets.QWidget()

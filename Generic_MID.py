@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Generic_MID(object):
     def setupUi(self, Generic_MID):
         Generic_MID.setObjectName("Generic_MID")
-        Generic_MID.resize(1004, 404)
+        Generic_MID.resize(1150, 500)
         font = QtGui.QFont()
         font.setBold(True)
         font.setWeight(75)
@@ -25,10 +25,6 @@ class Ui_Generic_MID(object):
         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
         self.verticalLayout.setObjectName("verticalLayout")
         self.ScrollArea_generic_mid = QtWidgets.QScrollArea(self.centralwidget)
-        self.ScrollArea_generic_mid.setStyleSheet("QScrollBar::handle {\n"
-"    background-color: rgb(218, 218, 218);\n"
-"    border-radius: 10px;\n"
-"}")
         self.ScrollArea_generic_mid.setWidgetResizable(True)
         self.ScrollArea_generic_mid.setObjectName("ScrollArea_generic_mid")
         self.scrollAreaWidgetContents_generic_mid = QtWidgets.QWidget()
